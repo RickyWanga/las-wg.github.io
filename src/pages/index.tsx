@@ -307,31 +307,35 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Footer */}
-          <footer className="bg-muted/50 py-12">
-            <div className="container mx-auto grid gap-8 px-4 md:grid-cols-4">
-              <div className="col-span-1 md:col-span-2">
-                <Link href="/" className="mb-4 flex items-center gap-2">
-                  <img src="/logo.svg" alt="LAS-WG Logo" className="h-8 w-auto" />
-                  <span className="text-xl font-bold">LAS-WG</span>
+          <footer className="bg-muted/50 py-12 border-t mt-12">
+            <div className="container mx-auto grid gap-12 px-4 md:grid-cols-2">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                <Link href="/" className="mb-6 flex items-center gap-2">
+                  <img src="/logo.svg" alt="LAS-WG Logo" className="h-10 w-auto" />
                 </Link>
-                <p className="max-w-xs text-sm text-muted-foreground">
+                <p className="max-w-xs text-base text-muted-foreground leading-relaxed">
                   Lightweight Agent Standard Working Group. Developing interoperable
-                  standards for the future of AI.
+                  standards for the future of AI agents.
                 </p>
               </div>
-              <div>
-                <h3 className="mb-4 font-semibold">Resources</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+              <div className="flex flex-col items-center md:items-end text-center md:text-right">
+                <h3 className="mb-6 font-semibold uppercase tracking-widest text-sm text-primary">Resources</h3>
+                <ul className="space-y-3 text-sm font-medium text-muted-foreground">
                   <li>
-                    <Link href="https://github.com/las-wg" className="hover:text-primary">
+                    <Link href="#about-us" className="transition-colors hover:text-primary">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://github.com/las-wg" className="transition-colors hover:text-primary" target="_blank">
                       GitHub
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="https://discord.gg/wmRSNHsRAh"
-                      className="hover:text-primary"
+                      className="transition-colors hover:text-primary"
+                      target="_blank"
                     >
                       Discord
                     </Link>
@@ -339,7 +343,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="container mx-auto mt-8 border-t px-4 pt-8 text-center text-xs text-muted-foreground">
+            <div className="container mx-auto mt-12 border-t px-4 pt-8 text-center text-xs text-muted-foreground/60">
               © {new Date().getFullYear()} LAS-WG. All rights reserved.
             </div>
           </footer>
